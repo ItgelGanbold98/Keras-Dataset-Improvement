@@ -7,6 +7,19 @@ I won't repeat the code presented on TensorFlow documentation, which you can vis
 Here, I will present a simple way to rotate and zoom in/out the keras digits to bolster the dataset and make the neural network more robust, as well as a 
 way to integrate a canvas, where you can write the digits yourself. 
 
+### Installation
+
+```py
+import tensorflow as tf
+import matplotlib.pyplot as plt
+import tkinter as tk
+from PIL import Image, ImageDraw
+import numpy as np
+import matplotlib.pyplot as plt
+
+mnist = tf.keras.datasets.mnist
+```
+
 ### Implement a function to rotate and zoom in/out the images
 ```py
 def augment_image(image):
