@@ -58,7 +58,7 @@ plt.show()
 ```
 
 In my case, I get the following:
-<img src='' alt='screenshot'/>
+<img src='img/augmented.png' alt='screenshot'/>
 
 ### Update your training sets. You can choose to keep this separate from the original keras dataset.
 
@@ -197,4 +197,4 @@ root.mainloop()
 ```
 
 ## That's it. Now you have a much more powerful dataset to work with. Below is an example of output.
-<img src='' alt='canvas'/>
+<img src='img/canvas.png' alt='canvas'/>
