@@ -31,8 +31,9 @@ def augment_image(image):
     scaled_image = zoom_layer(expanded_image)
 
     # Randomly rotate the scaled image
-    rotated_image = tf.image.rot90(scaled_image, tf.random.uniform(shape=[], minval=0, maxval=4, dtype=tf.int32))
-
+    rotation_layer = tf.keras.layers.RandomRotation(factor=(-0.3, 0.3), fill_mode='constant')
+    rotated_image = rotation_layer(scaled_image)
+    
     # Randomly shift the image left or right
     shift_value = tf.random.uniform(shape=[], minval=-10, maxval=10, dtype=tf.float32)
     shift_layer = tf.keras.layers.experimental.preprocessing.Rescaling(1.0 / 255)  # Rescale values to [0,1]
